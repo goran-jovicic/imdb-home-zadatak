@@ -16,4 +16,8 @@ class Movie extends Model
         'year_of_production' => 'required | between:1900,2019|integer',
         'storyline' => 'required | max:1000'
     ];
+
+    public function comments() {
+        return $this->hasMany(Comment::class);
+    }
 }
