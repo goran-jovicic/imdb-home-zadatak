@@ -7,13 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Movie extends Model
 {
     protected $fillable = [
-        'title', 'genre', 'production_date', 'storyline'
+        'title', 'genre', 'year_of_production', 'storyline'
     ];
-    
+
     const STORE_RULES = [
         'title' => 'required',
         'genre' => 'required',
-        'production_date' => 'required',
+        'year_of_production' => 'required | between:1900,2019|integer',
         'storyline' => 'required | max:1000'
     ];
 }

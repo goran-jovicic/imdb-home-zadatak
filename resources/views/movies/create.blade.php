@@ -21,9 +21,9 @@
     </div>
 
     <div class="form-group">
-        <label for="production_date">Year</label>
-        <input type="number" id="production_date" name="production_date">
-        @include ('partials.error-message', ['fieldTitle' => 'production_date'])
+        <label for="year_of_production">Year</label>
+        <input type="number" id="year_of_production" name="year_of_production">
+        @include ('partials.error-message', ['fieldTitle' => 'year_of_production'])
     </div>
     
     <div class="form-group">

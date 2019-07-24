@@ -24,6 +24,10 @@ class MoviesController extends Controller
     }
 
     public function store() {
-        
+        $this->validate(request(), Movie::STORE_RULES);
+
+        $movie = Movie::create(request()->all());
+        \Log::info($movie);
+        return redirect('/movies');
     }
 }
