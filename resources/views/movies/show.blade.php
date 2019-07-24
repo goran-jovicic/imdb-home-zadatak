@@ -30,4 +30,17 @@
             @endforeach
         </ul>
     @endif
+    <form method="POST" action="/movies/{{$movie->id}}/comments">
+        @csrf
+
+        <div class="form-group">
+            <label for="content">Comment</label>
+            <textarea class="form-control" id="content" name="content"></textarea>
+            @include ('partials.error-message', ['fieldTitle' => 'content'])
+        </div>
+
+        <div class="form-control">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
 @endsection
